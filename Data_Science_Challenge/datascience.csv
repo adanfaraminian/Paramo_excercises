@@ -1,20 +1,20 @@
  pizza_id ;ingredients ;price 
-pizza margherita ;mozzarella cheese, tomato sauce ;16,99
-farmhouse ;ham, mushrooms ;18,99
-hawaiian ;ham, pineapple ;18,99
-pepperoni ;double pepperoni, mozzarella ;20,99
-meat ;spicy pork, ham, pepperoni, seasoned minced beef ;20,99
-meaty one ;pepperoni, pork, beef, smoked bacon, chicken ;20,99
-bbq ;bbq sauce, bacon, chicken ;20,99
-chicken ;chicken, mushrooms, peppers, red onions ;20,99
-veggie ;mushrooms, peppers, red onions, tomato ;18,99
-meat combo ;pepperoni, pork, beef, smoked bacon, chicken + spicy pork, ham, pepperoni, seasoned minced beef + bbq sauce, bacon, chicken ;54,99
-sizzler beef ;chillies, jalapenos, red onions, seasoned beef ;20,99
-chicken sizzler ;green chillies, jalapenos, red onions, chicken ;20,99
-customers pizza ;red onions, spicy pork, tomato, sweetcorn, double pepperoni ;24,99
-clasic ;ham, mushrooms, sliced ;23,39
-light ;peppers, red onions, tomato, sweetcorn, mushrooms ;24,99
-argentinian ;beef, mixed peppers, mozarella, red onions ;23,39
+pizza margherita ;mozzarella cheese, tomato sauce ;16.99
+farmhouse ;ham, mushrooms ;18.99
+hawaiian ;ham, pineapple ;18.99
+pepperoni ;double pepperoni, mozzarella ;20.99
+meat ;spicy pork, ham, pepperoni, seasoned minced beef ;20.99
+meaty one ;pepperoni, pork, beef, smoked bacon, chicken ;20.99
+bbq ;bbq sauce, bacon, chicken ;20.99
+chicken ;chicken, mushrooms, peppers, red onions ;20.99
+veggie ;mushrooms, peppers, red onions, tomato ;18.99
+meat combo ;pepperoni, pork, beef, smoked bacon, chicken + spicy pork, ham, pepperoni, seasoned minced beef + bbq sauce, bacon, chicken ;54.99
+sizzler beef ;chillies, jalapenos, red onions, seasoned beef ;20.99
+chicken sizzler ;green chillies, jalapenos, red onions, chicken ;20.99
+customers pizza ;red onions, spicy pork, tomato, sweetcorn, double pepperoni ;24.99
+clasic ;ham, mushrooms, sliced ;23.39
+light ;peppers, red onions, tomato, sweetcorn, mushrooms ;24.99
+argentinian ;beef, mixed peppers, mozarella, red onions ;23.39
 bbq feast ;bbq, pork spicy, ham, pepperoni, seasoned beef ;
 supreme ;peperoni, beef, pork sausage, mushrooms, mixed peppers, red onions ;
 veggie ;chillies, jalapenos, peppers, onions ;
