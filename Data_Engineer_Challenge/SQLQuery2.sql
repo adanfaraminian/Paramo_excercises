@@ -77,15 +77,6 @@ FROM
 --Mushrooms, Pepperoni, Salami" 
 
 
---Ayude al cocinero generando una lista de ingredientes separados por comas ordenados 
---alfabéticamente para cada pizza ordenada y agregue 2x delante de cualquier 
---ingrediente que se solicite como extra y que también esté presente en la receta 
---estándar.
-
---Por ejemplo:
---La receta para order_id = 5 sería: "2xTocino, Salsa BBQ, Carne, Queso, Pollo, 
---Champiñones, Pepperoni, Salami"
-
 --====================================================================================
 
 SELECT order_id, pizza_id
@@ -101,7 +92,7 @@ SELECT @Numbers
 
 
 
-(SELECT num.name as Pizza_name,num.ingredient, ing.name, num.order_id,exclusions,extras
+SELECT num.name as Pizza_name,num.ingredient, ing.name, num.order_id,exclusions,extras
 		FROM dbo.Ingredients ing,
 
 						 -- Subquery: 
@@ -117,4 +108,4 @@ SELECT @Numbers
 							  CROSS APPLY STRING_SPLIT(sel.ingredients, ',')) num
 						 --
 					WHERE ing.id = num.ingredient
-		ORDER BY order_id, Pizza_name) 
+		ORDER BY order_id, Pizza_name 
