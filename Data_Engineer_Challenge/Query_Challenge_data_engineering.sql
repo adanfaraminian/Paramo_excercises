@@ -15,7 +15,7 @@ ingredients in all the ordered pizzas in the past 6 months
 --==================================================================================*/
 
 
---I determine the date of the last order in the "Orders" table. This declaration is 
+--I determined the date of the last order in the "Orders" table. This declaration is 
 --created to not depend on setting the last one date, whatever it may be.
 
 DECLARE @LastMonth DATETIME
@@ -25,23 +25,23 @@ SET @LastMonth = DATEADD(month, DATEDIFF(month, 0, (SELECT MAX(order_time) FROM 
 SELECT l.name as Ingredients_New_Pizza
 FROM	
 		--4. Subquery: The five most used ingredients in the last 
-		--six months was counted and a new pizza was created.
+		--six months were counted and a new pizza was created.
 		
 		(SELECT TOP 5 fin.name, count(fin.name) as Total
 		FROM
 
-			--3. Subquery: Each ingredient was assinged its real name.
+			--3. Subquery: Each ingredient was assiged its real name.
 			(SELECT num.name as Pizza_name,num.ingredient, ing.name
 			 FROM dbo.Ingredients ing,
 
-				 --2. Subquery: Each pizza on the "Orders" table with the 
-				 --ingredients for its preparation was linked. The ingredients 
-				 --was separetd into new rows using(",") as the separation character.
+				 --2. Subquery: Each pizza on the "Orders" table was linked with the 
+				 --ingredients for its preparation. The ingredients 
+				 --was separated into new rows using (",") as the separation character.
 				 
 				 (SELECT name,value ingredient 
 				  FROM 
 
-					  --1. Subquery: The orders was selected for the last six months.
+					  --1. Subquery: The orders were selected for the last six months.
 					  
 					  (SELECT piz.name, ord.order_time, piz.ingredients
 					  FROM dbo.Orders ord, dbo.Pizza piz
@@ -103,11 +103,11 @@ FROM
 			 FROM dbo.Ingredients ing,
 
 							 --2. Subquery: The ingredients 
-							 --was separetd into new rows using(",") as the separation character.
+							 --was separated into new rows using(",") as the separation character.
 							 (SELECT name,value ingredient ,sel.order_id,pizza_order,exclusions,extras
 							  FROM 
 
-								  --1. Subquery: Was added to each "order_id" an identifier of the pizzas that were requested.
+								  --1. Subquery: An identifier of the requested pizzas was added to each "order_id".
 
 								  (SELECT order_id,ord.exclusions,ord.extras,piz.name, ord.order_time, piz.ingredients,
 								  IIF(order_id = LEAD(order_id) OVER(ORDER BY order_id), 2, order_id/order_id) 'pizza_order'
@@ -122,7 +122,7 @@ FROM
 
 
 -----------------
--- ## Part 2: an alphabetically ordered comma separated ingredient list 
+-- ## Part 2: An alphabetically ordered comma-separated ingredient list 
 --    was created for each ordered pizza.
 SELECT 
   order_id, pizza_order,Pizza_name,
